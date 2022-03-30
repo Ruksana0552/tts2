@@ -1,10 +1,34 @@
-<div id="form-wrapper" style="max-width:500px;margin:auto;">
-  
+<!--<div id="form-wrapper" style="max-width:500px;margin:auto;">
+  <textarea rows="5" cols="60" name="text" formControlName="text1" placeholder="Enter text">
 <form [formGroup]="formgroup"text-align="center"> 
 
 <textarea rows="5" cols="60" name="text" formControlName="text1" placeholder="Enter text"></textarea>
-</form>
-<button type="submit" class="btn btn-primary" (click)="speak()">speak</button>
+</form> -->
+<div>
+  <select  name="Voice" [(ngModel)]="selectedVoice" aria-placeholder="select voice">
+    <option value="en-AU-WilliamNeural">	English (Australia)-male</option>
+    <option value="en-AU-NatashaNeural">	English (Australia)-female</option>
+    <option value="	en-IN-NeerjaNeural">English (India)-female</option>
+    <option value="	en-IN-PrabhatNeural">English (India)-male	</option>
+    
+    </select>
+    <select name="language" [(ngModel)]="selectedLanguage">
+      <option value="en-AU">	English (Australia)	</option>
+      <option value="	en-IN"> English (India) </option>
+      <option value="	en-HK">	English (Hongkong)	</option>
+    
+    </select>
+    <br><br><br>
 
+    
+   <!--> <audio #audio>
+<source src="C:/Users/ruksana.khanum/Desktop/text to speech/text_to_speech/src/assets/speech/file.wav" >
+    </audio>-->
+<h5 #sample> One bright morning as the Fox was following his sharp nose through the wood in search of a bite to eat, he saw a Crow on the limb of a tree overhead. This was by no means the first Crow the Fox had ever seen. What caught his attention this time and made him stop for a second look, was that the lucky Crow held a bit of cheese in her beak.
+
+    “No need to search any farther,” thought sly Master Fox. “Here is a dainty bite for my breakfast.”</h5>
+  
+<br><br><br>
+    <button type="submit" class="btn btn-primary" (click)="speak()">Play &#9658;</button>
 </div>
 
